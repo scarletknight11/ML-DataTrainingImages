@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>helmet3.jpg</filename>
+	<path>C:\Users\sanji\Documents\object_detection\TensorFlow\models\research\object_detection\Dataset\video_to_image\images\helmet3.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1500</width>
+		<height>1500</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>helmet</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>7</xmin>
+			<ymin>1</ymin>
+			<xmax>1495</xmax>
+			<ymax>1476</ymax>
+		</bndbox>
+	</object>
+</annotation>

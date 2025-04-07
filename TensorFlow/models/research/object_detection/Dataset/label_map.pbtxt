@@ -1,0 +1,24 @@
+item {
+  id: 1
+  name: 'potato'
+}
+
+item {
+  id: 2
+  name: 'capsicum'
+}
+
+item {
+  id: 3
+  name: 'garlic'
+}
+
+item {
+  id: 4
+  name: 'tomato'
+}
+
+item {
+  id: 5
+  name: 'onion'
+}

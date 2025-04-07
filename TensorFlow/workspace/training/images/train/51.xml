@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>51.jpg</filename>
+	<path>D:\Youtube_project\ImagePro\custom_object_detection\dataset\51.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>480</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>potato</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>402</xmin>
+			<ymin>323</ymin>
+			<xmax>480</xmax>
+			<ymax>642</ymax>
+		</bndbox>
+	</object>
+</annotation>

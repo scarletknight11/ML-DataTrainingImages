@@ -1,0 +1,89 @@
+In this video, I will create a dataset of 5 vegetables(Onion, Potato, Garlic, Capsicum, and Tomato).
+
+It can be done in two ways:
+1. Take lots of photos of objects. It will take lot of time to do that.
+
+2.
+- Take 5-7 videos of object in different backgrounds, lighting, distance, etc.
+- The video length should be around 2-3 minutes.
+- Then we will convert videos into images.
+- When the number of classes increases you need more images to increase accuracy 
+- Using this method you just have to take a video of objects for 2-3 mintus.
+
+Now we will install labelImg:
+pip install labelImg
+
+Open labelImg
+1. Open Dir: Select image folder path
+2. Format: Select PascalVOC for Tensorflow 2 Object detection API.
+3. Create RectBox: Use to create box of different class
+   Do this process for all object in image
+
+4. Save: It will create a xml file for every image.
+
+Do this process for all images.
+I am done with all images.
+Now I have to split these images into two:
+1. Train: 90% of the images.
+2. Test: 10% of the images.
+
+Create two folder in images
+I have 263 images in this folder 
+Select 26 images along with there xml file and cut-paste it into test folder.
+
+Make sure to check on xml files
+
+Now remaining images and there xml files goes to train foler.
+
+Now we have successfully create our dataset.
+
+Now inside TensorFlow folder we will create some folder
+Now copy-paste images folder here.
+
+Now create another folder for labelmap
+Now create a empty labelmap in pbtxt format
+Or you can copy and paste it from :
+TensorFlow\models\research\object_detection\data
+We will copy this one
+we have only 5 classes
+
+Now give an id to every class
+Make sure the name you have written here should be same as in xml files.
+
+
+Now we will generate tfrecord for train and test images.
+Basically a single file contain all images and there label in it.
+
+This python file will convert images and xml file into tfrecord.
+
+Link of this python file will be in the description.
+
+Train:
+
+python generate_tfrecord.py -x D:/object_detetion/TensorFlow/workspace/training/images/train -l D:/object_detetion/TensorFlow/workspace/training/annotations/labelmap.pbtxt -o D:/object_detetion/TensorFlow/workspace/training/annotations/train.record 
+
+
+
+path_of_train_folder:
+D:/object_detetion/TensorFlow/workspace/training/images/train
+
+path_of_labelmap: 
+D:/object_detetion/TensorFlow/workspace/training/annotations/labelmap.pbtxt
+
+path_of_output_tfrecord:
+D:/object_detetion/TensorFlow/workspace/training/annotations/train.record 
+
+Now replace each path 
+We have successfully created train.record
+Do this for test
+
+
+Test:
+
+Replace test folder and tfrecord name
+python generate_tfrecord.py -x D:/object_detetion/TensorFlow/workspace/training/images/test -l D:/object_detetion/TensorFlow/workspace/training/annotations/labelmap.pbtxt -o D:/object_detetion/TensorFlow/workspace/training/annotations/test.record 
+
+We have successfully create tfrecord for test and train
+
+Next video we will train model using these three files
+Bye
